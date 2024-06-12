@@ -1,33 +1,18 @@
-const arr = ['a', 'b', 'c'];
+const numberOfFilms = +prompt('How many films have you already watched?', '');
 
-arr[10] = '3456';
-
-console.log(arr[10]);
-
-const arrObj = {
-    a: 'a',
-    '1': 'b',
-    2: 'c',
-    abc: {
-        df: [{}, {}],
-        def: {
-
-        }
-    }
-
+const personalMovieDB = {
+    count: numberOfFilms,
+    movies: {},
+    actors: {},
+    genres: [],
+    privat: false
 };
-const b = 'b';
+const a = prompt('One of the last movies you watched?', ''),
+      b = prompt('How much would you rate it?', ''),
+      c = prompt('One of the last movies you watched?', ''),
+      d = prompt('How much would you rate it?', '');
 
-// arrObj.b = '1234';
-arrObj['b'] = '1234';
+personalMovieDB.movies[a] = b;
+personalMovieDB.movies[c] = d;
 
-console.log(arrObj['b']);
-console.log(arrObj.b);
-
-//const obj = {a: 1, b: 2};
-const obj = {
-    Anna: 500,
-    'Alice': 800
-}
-
-
+console.log(personalMovieDB);
